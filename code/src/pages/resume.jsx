@@ -1,7 +1,19 @@
 export default function Resume() {
+const onButtonClick = () => {
+    const pdfUrl ="Resume.pdf";
+    const link = document.createElement("a");
+    link.href = pdfUrl;
+    link.download = "Resume.pdf";
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+
+    
+}
+
     return (
         <div>
-            <h1>Development Proficiencies</h1>
+            <h3>Development Proficiencies</h3>
             <p>
                 Skilled in: 
                 <ul>
@@ -33,6 +45,8 @@ export default function Resume() {
                     And More to come!
                     </li>
                 </ul>
+                <h5>Click on the button below to download my Resume</h5>
+                <button onClick={onButtonClick}>Download Resume</button>
                 
                 
             </p>
