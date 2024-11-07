@@ -5,6 +5,9 @@ function Contact() {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
+    const [errors, setErrors] = useState([]);
+
+
 
     const handleInputChange = (e) => {
         const { target } = e;
@@ -13,21 +16,34 @@ function Contact() {
 
         if (inputType === 'name') {
             setName(inputValue);
+            setErrors((prevErrors) => prevErrors.filter((error) => error !== "Name is required."));
         } else if (inputType === 'email') {
             setEmail(inputValue);
+            setErrors((prevErrors) => prevErrors.filter((error) => error !== "Email is required."));
         }  else if (inputType === 'message') {
             setMessage(inputValue);
+            setErrors((prevErrors) => prevErrors.filter((error) => error !== "Message is required."));
+
+
 
         }
     };
 
     const handleFormSubmit =  (e) => {
         e.preventDefault();
+        const newErrors = [];
 
-        if (!name ||  !email || !message) {
-            alert("Please fill in all fields before submitting.");
+        
+        if (!name) newErrors.push("Name is required.");
+        if (!email) newErrors.push("Email is required.");
+        if (!message) newErrors.push("Message is required.");
+
+        if (newErrors.length > 0) {
+            setErrors(newErrors);
             return;
         }
+            
+        
             
 
 
@@ -36,6 +52,7 @@ function Contact() {
         setName('');
         setEmail('');
         setMessage('');
+        setErrors([]);
         
     };
 
@@ -43,11 +60,19 @@ function Contact() {
         const { target } = e;
         const inputType = target.name;
         const inputValue = target.value;
+        const newErrors = [...errors]
 
         if (inputValue.trim() === "" ) {
-            alert(`Please enter your ${inputType}.`);
-
+            if (inputType === 'name' && !newErrors.includes("Name is required.")) {
+                newErrors.push("Name is required.");
+            } else if  (inputType === 'email' && !newErrors.includes("Email is required.")) {
+                newErrors.push("Email is required.");
+            } else if  (inputType === 'message' && !newErrors.includes("Message is required.")) {
+                newErrors.push("Message is required.")
         }
+        }
+
+        setErrors(newErrors);
     };
     
 
@@ -65,6 +90,7 @@ function Contact() {
           type="text"
           placeholder="Name"
         />
+        
         <input
           value={email}
           name="email"
@@ -82,9 +108,17 @@ function Contact() {
           type = "text"
           placeholder = "Message"
           />
+          
         <button type="submit">
           Submit
         </button>
+        {errors.length > 0 && (
+                    <div className="error-messages">
+                        {errors.map((error, index) => (
+                            <p key={index} className="error-text">{error}</p>
+                        ))}
+                    </div>
+                )}
       </form>
 
     </div>

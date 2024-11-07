@@ -12,7 +12,7 @@ const onButtonClick = () => {
 }
 
     return (
-        <div>
+        <div className="text-center">
             <h3>Development Proficiencies</h3>
             <p>
                 Skilled in: 
