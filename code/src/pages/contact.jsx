@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { validateEmail } from '../utils/helper'
 
 
 function Contact() {
@@ -6,6 +7,7 @@ function Contact() {
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
     const [errors, setErrors] = useState([]);
+    
 
 
 
@@ -37,12 +39,13 @@ function Contact() {
         if (!name) newErrors.push("Name is required.");
         if (!email) newErrors.push("Email is required.");
         if (!message) newErrors.push("Message is required.");
+        if (!validateEmail(email)) newErrors.push("Invalid email address.");
 
         if (newErrors.length > 0) {
             setErrors(newErrors);
             return;
         }
-            
+        
         
             
 
@@ -69,7 +72,12 @@ function Contact() {
                 newErrors.push("Email is required.");
             } else if  (inputType === 'message' && !newErrors.includes("Message is required.")) {
                 newErrors.push("Message is required.")
+            }
         }
+        if (inputType === 'email' && inputValue.trim() !== "" && !validateEmail(inputValue)) {
+            if (!newErrors.includes("Invalid email address.")) {
+                newErrors.push("Invalid email address.");
+            }
         }
 
         setErrors(newErrors);
@@ -112,6 +120,8 @@ function Contact() {
         <button type="submit">
           Submit
         </button>
+        
+        
         {errors.length > 0 && (
                     <div className="error-messages">
                         {errors.map((error, index) => (
