@@ -14,7 +14,7 @@ const onButtonClick = () => {
     return (
         <div className="text-center">
             <h3>Development Proficiencies</h3>
-            <p>
+            
                 Skilled in: 
                 <ul>
                     <li>
@@ -49,7 +49,7 @@ const onButtonClick = () => {
                 <button onClick={onButtonClick}>Download Resume</button>
                 
                 
-            </p>
+            
 
         </div>
     )

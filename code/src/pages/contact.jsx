@@ -88,7 +88,7 @@ function Contact() {
 
     return (
         <div className ="container text-center">
-            <h2>Contact Me</h2>
+            <h3>Contact Me</h3>
             <form className="form" onSubmit={handleFormSubmit}>
         <input
           value={name}
