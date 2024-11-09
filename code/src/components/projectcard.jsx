@@ -1,15 +1,19 @@
 
 import PropTypes from  'prop-types';
+import './projectcard.css'
 
 
 function ProjectCard({title, image, githubLink}) {
     return (
-        <div>
-            <img src={image} alt={title} />
+        <div className="project-card">          
             <a  href={githubLink} target="_blank" rel = "noopener norefferer"> 
-                <h3>{title}</h3>
+                <div className="image-container">
+                    <img src={image} alt={title} className ="project-image" />
+                    <div className="title-overlay">
+                        <h3>{title}</h3>
+                    </div>
+                </div>                        
             </a>
-
         </div>
     )
 }

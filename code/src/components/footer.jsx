@@ -4,12 +4,12 @@ import { AiFillLinkedin } from  'react-icons/ai';
 
 function Footer() {
     return (
-        <footer className="footer">
+        <footer className="footer fixed-bottom text-center">
             <a href = "https://github.com/andrewsoper1" target ="_blank" rel="noopener noreferrer">
-            <AiFillGithub size={24} />
+            <AiFillGithub size={30} />
             </a>
             <a href ="https://www.linkedin.com/in/andrew-soper-223254117/" target = "blank" rel="noopener  noreferrer">
-            <AiFillLinkedin size={24} />
+            <AiFillLinkedin size={30} />
             </a>
 
 

@@ -1,8 +1,9 @@
 import me from '/assets/me.jpg'
 
+
 export default function About() {
     return (
-        <div className='text-center'>
+        <div className='text-center container pt-50'>
             <h1>About Me</h1>
             <img  src ={me} alt="Me" className="img-thumbnail"/>
 

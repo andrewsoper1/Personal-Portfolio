@@ -8,8 +8,8 @@ function App() {
 
   return (
     <>
-      <Nav  />
-      <main className="mx-3">
+      <Nav />
+      <main className="container pt-5 pb-5">
         <Outlet />
       </main>
       <Footer />

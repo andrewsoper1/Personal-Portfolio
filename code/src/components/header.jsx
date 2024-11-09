@@ -5,9 +5,9 @@ function NavTabs() {
 
     return (
         
-        <ul className=  "nav nav-tabs">
+        <ul className=  "nav nav-tabs fixed-top">
             <h4>Andrew Soper</h4>
-            <li className=  "nav-item">
+            <li className=  "nav-item ">
                 <Link
                     to="/"
                     className={currentPage === '/' ? 'nav-link active' : 'nav-link'}

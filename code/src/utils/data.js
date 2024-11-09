@@ -28,7 +28,7 @@ const projects = [
     {
         id: 5,
         title: "ResortRadar",
-        image: "/assets/htmlpage.png",
+        image: "/assets/resortradar.png",
         githubLink: "https://github.com/andrewsoper1/mini-project",
 
     },
