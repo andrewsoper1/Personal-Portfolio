@@ -3,13 +3,14 @@ import Nav from './components/header';
 import Footer from  './components/footer';
 
 
+
 function App() {
   
 
   return (
     <>
       <Nav />
-      <main className="container pt-5 pb-5">
+      <main className="d-flex justify-content-center page">
         <Outlet />
       </main>
       <Footer />

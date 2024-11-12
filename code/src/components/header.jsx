@@ -5,40 +5,42 @@ function NavTabs() {
 
     return (
         
-        <ul className=  "nav nav-tabs fixed-top">
-            <h4>Andrew Soper</h4>
-            <li className=  "nav-item ">
-                <Link
-                    to="/"
-                    className={currentPage === '/' ? 'nav-link active' : 'nav-link'}
-                >
-                About Me
-                </Link>
-            </li>
-            <li className="nav-item">
-                <Link
-                    to="/portfolio"
-                    className={currentPage === '/portfolio' ? 'nav-link active' : 'nav-link'}
-                >
-                Portfolio
-                </Link>
-            </li>
-            <li className="nav-item">
-                <Link
-                to="/resume"
-                className={currentPage === '/resume' ? 'nav-link active' : 'nav-link'}
-                >
-                Resume
-                </Link>
-            </li>
-            <li className="nav-item">
-                <Link
-                to="/contact"
-                className={currentPage === '/contact' ? 'nav-link active' : 'nav-link'}
-                >
-                Contact
-                </Link>
-            </li>
+        <ul className= "nav nav-tabs sticky-top d-flex justify-content-between align-items-center">          
+                <h4>Andrew Soper</h4> 
+                <div className= "d-flex">      
+                    <li className=  "nav-item ">
+                        <Link
+                            to="/"
+                            className={currentPage === '/' ? 'nav-link active' : 'nav-link'}
+                        >
+                        About Me
+                        </Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link
+                            to="/portfolio"
+                            className={currentPage === '/portfolio' ? 'nav-link active' : 'nav-link'}
+                        >
+                        Portfolio
+                        </Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link
+                        to="/resume"
+                        className={currentPage === '/resume' ? 'nav-link active' : 'nav-link'}
+                        >
+                        Resume
+                        </Link>
+                    </li>
+                    <li className="nav-item">
+                        <Link
+                        to="/contact"
+                        className={currentPage === '/contact' ? 'nav-link active' : 'nav-link'}
+                        >
+                        Contact
+                        </Link>
+                    </li>
+                </div>  
         </ul>
 
     );

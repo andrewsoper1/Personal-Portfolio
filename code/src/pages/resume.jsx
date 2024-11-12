@@ -42,7 +42,7 @@ const onButtonClick = () => {
                     React
                     </li>
                     <li>
-                    And More to come!
+                    And more to come!
                     </li>
                 </ul>
                 <h5>Click on the button below to download my Resume</h5>
