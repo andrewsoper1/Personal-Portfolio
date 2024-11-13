@@ -34,9 +34,11 @@
     text-align: center;
     border-radius: 8px;
     width: 80%;
+    pointer-events: auto
 }
 
 .title-overlay h3 {
     margin: 0;
     font-size: 1.2em;
 }
+

@@ -1,3 +1,25 @@
+html, body {
+  height: 100%;
+  margin: 0;  
+  font-family: Arial, sans-serif;
+}
+
+
+#root {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+
+.App {
+  flex: 1;
+}
+
+body {
+  background-color: #6cd4ffff;
+}
+
 img {
   display: block;
   margin-top: 50px;
@@ -8,12 +30,67 @@ img {
 
 }
 
+
+
 .nav {
   margin-bottom: 20px;
   
 }
 
-.page {
-  margin-top: 20px;
-  margin-bottom: 20px;
+
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #8b80f9ff;
+  color: #333;
+}
+
+.nav-tabs {
+  color: #6cd4ffff;
+  --bs-nav-tabs-link-active-bg: #6cd4ffff;
+  --bs-nav-tabs-link-active-border-color: #6cd4ffff;
+  --bs-nav-tabs-link-active-color: #8b80f9ff;
+  --bs-nav-tabs-link-hover-border-color: #6cd4ffff;
+  border-bottom: none;
+}
+
+.nav h4 {
+  color: #6cd4ffff;
+  font-weight: bold;
+}
+
+.nav ul {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-link {
+  font-weight: bold;
+}
+
+main {
+  background-color: #6cd4ffff;
+  background-size: 100%;
+}
+
+.aboutme {
+  color: #8b80f9ff;
+  font-weight: bold;
+}
+
+.portfoliotitle {
+  color: #8b80f9ff;
+  font-weight: bold;
+}
+
+.resume {
+  color: #8b80f9ff;
+  font-weight: bold;
+}
+
+.contactme {
+  color: #8b80f9ff;
+  font-weight: bold;
 }

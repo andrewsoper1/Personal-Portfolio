@@ -5,7 +5,7 @@ import './portfolio.css'
 export default function Portfolio() {
     return (
         <div className ="portfolio">
-            <h3 className ="text-center">My Portfolio</h3>
+            <h3 className ="text-center portfoliotitle">My Portfolio</h3>
             <div className="projects-grid">
                 {projects.map((project) =>(
                     <ProjectCard 
@@ -13,6 +13,8 @@ export default function Portfolio() {
                     title={project.title}
                     image={project.image}
                     githubLink={project.githubLink}
+                    deployedLink={project.deployedLink}
+
                      />
                 ))}
 

@@ -1,0 +1,26 @@
+.skills-list {
+    padding-left: 20px
+}
+
+.skills-list span {
+    display: block;
+    
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.skills-list ul {
+    list-style-position: outside; 
+    padding-left: 0px; 
+    
+}
+
+.skills-list li {
+    list-style-type: none;
+    margin-left: 10px; 
+}
+
+li span {
+    position: relative;
+    left: -0px;
+  }

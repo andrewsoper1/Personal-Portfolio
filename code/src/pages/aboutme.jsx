@@ -3,7 +3,7 @@ import me from '/assets/me.jpg'
 
 export default function About() {
     return (
-        <div className='text-center container pt-50'>
+        <div className='text-center container aboutme '>
             <h1>About Me</h1>
             <img  src ={me} alt="Me" />
 
